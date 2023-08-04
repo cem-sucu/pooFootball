@@ -45,7 +45,11 @@ $joueur7 = new Joueur("Anglaise", "Saka", "Anit", "1986-01-01");
 $joueur8 = new Joueur("Anglaise", "Grealish", "Jack", "1986-01-01");
 $joueur9 = new Joueur("Italienne", "Buffon", "Geo", "1986-01-01");
 $joueur10 = new Joueur("Italienne", "Gattuiso", "David", "1986-01-01");
+
+// liens entre joueur et les equipe avec lesquel il a pu jouer
 $relation1 = new Posseder($equipe1, $joueur1, '2020-07-07');
+$relation2 = new Posseder($equipe2, $joueur1, '2005-07-07');
+$relation3 = new Posseder($equipe8, $joueur1, '2000-07-07');
 
 //ajouter les equipe de France
 $pays1->ajouterEquipe($equipe1);
@@ -96,6 +100,12 @@ $equipe7->ajouterJoueur($joueur6);
 $equipe1->afficherJoueurs();
 $equipe5->afficherJoueurs();
 $equipe7->afficherJoueurs();
+
+
+$joueur1->ajouterPossession($relation1);
+$joueur1->ajouterPossession($relation2);
+$joueur1->ajouterPossession($relation3);
+$joueur1->afficherEquipesDuJoueur();
 
 
 
