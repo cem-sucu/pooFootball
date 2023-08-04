@@ -19,7 +19,7 @@ $equipe3 = new Equipe("Monaco", 1800, $pays1);
 //equipe All
 $equipe4 = new Equipe("Dortmund", 2000, $pays2);
 $equipe5 = new Equipe("Bayern Minich", 2000, $pays2);
-$equipe6 = new Equipe("Bayern Minich", 2000, $pays2);
+$equipe6 = new Equipe("Lepzig", 2000, $pays2);
 //equipe ES
 $equipe7 = new Equipe("Real Madrid", 1903, $pays3);
 $equipe8 = new Equipe("Barcelone", 1890, $pays3);
@@ -45,8 +45,6 @@ $joueur7 = new Joueur("Anglaise", "Saka", "Anit", "1986-01-01");
 $joueur8 = new Joueur("Anglaise", "Grealish", "Jack", "1986-01-01");
 $joueur9 = new Joueur("Italienne", "Buffon", "Geo", "1986-01-01");
 $joueur10 = new Joueur("Italienne", "Gattuiso", "David", "1986-01-01");
-
-
 $relation1 = new Posseder($equipe1, $joueur1, '2020-07-07');
 
 //ajouter les equipe de France
@@ -84,6 +82,20 @@ $pays3->afficherEquipes();
 $pays4->afficherEquipes();
 //italie
 $pays5->afficherEquipes();
+
+//psg
+$equipe1->ajouterJoueur($joueur1);
+$equipe1->ajouterJoueur($joueur2);
+//bayern
+$equipe5->ajouterJoueur($joueur3);
+$equipe5->ajouterJoueur($joueur4);
+//real madrid
+$equipe7->ajouterJoueur($joueur5);
+$equipe7->ajouterJoueur($joueur6);
+
+$equipe1->afficherJoueurs();
+$equipe5->afficherJoueurs();
+$equipe7->afficherJoueurs();
 
 
 
